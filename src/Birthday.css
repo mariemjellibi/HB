@@ -1,0 +1,160 @@
+/* Fancy Background */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(120deg, #ff9a9e, #fad0c4, #fbc2eb);
+    background-size: 400% 400%;
+    animation: backgroundGradient 6s ease infinite;
+    font-family: "Arial", sans-serif;
+    overflow: hidden;
+  }
+  
+  @keyframes backgroundGradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  /* Flower Grid */
+  .birthday-container {
+    text-align: center;
+    width: 100%;
+  }
+  
+  .flower-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 30px;
+  }
+  
+  /* Flower Styling */
+  .flower {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: growFlower 0.7s ease-out forwards;
+    transform: scale(0);
+  }
+  
+  @keyframes growFlower {
+    to {
+      transform: scale(1);
+    }
+  }
+  
+  .petal {
+    width: 60px;
+    height: 100px;
+    background: radial-gradient(circle, #ff7eb3, #ff007f);
+    position: absolute;
+    border-radius: 50%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+  
+  .petal-1 {
+    transform: rotate(0deg) translateY(-50%);
+  }
+  
+  .petal-2 {
+    transform: rotate(60deg) translateY(-50%);
+  }
+  
+  .petal-3 {
+    transform: rotate(120deg) translateY(-50%);
+  }
+  
+  .petal-4 {
+    transform: rotate(180deg) translateY(-50%);
+  }
+  
+  .petal-5 {
+    transform: rotate(240deg) translateY(-50%);
+  }
+  
+  .petal-6 {
+    transform: rotate(300deg) translateY(-50%);
+  }
+  
+  .center {
+    width: 40px;
+    height: 40px;
+    background: radial-gradient(circle, yellow, orange);
+    border-radius: 50%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+  }
+  
+  /* Stem and Leaves */
+  .stem {
+    width: 10px;
+    height: 100px;
+    background-color: #4caf50;
+    border-radius: 5px;
+    margin-top: 30px;
+  }
+  
+  .leaf {
+    width: 40px;
+    height: 20px;
+    background-color: #4caf50;
+    position: absolute;
+    border-radius: 50%;
+  }
+  
+  .leaf-left {
+    top: 50px;
+    left: -40px;
+    transform: rotate(-45deg);
+  }
+  
+  .leaf-right {
+    top: 50px;
+    right: -40px;
+    transform: rotate(45deg);
+  }
+  
+  /* Fancy Text Animation */
+  .birthday-text {
+    color: #fff;
+    font-size: 3rem;
+    font-weight: bold;
+    animation: textFadeIn 1s ease-out forwards;
+    opacity: 0;
+    margin-top: 20px;
+  }
+  
+  @keyframes textFadeIn {
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Responsiveness */
+  @media (max-width: 768px) {
+    .flower {
+      transform: scale(0.8);
+    }
+  
+    .birthday-text {
+      font-size: 2rem;
+    }
+  
+    .flower-grid {
+      gap: 15px;
+    }
+  }
+  
